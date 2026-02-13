@@ -400,12 +400,13 @@
     margin-top: 1rem;
   }
   .value {
-    margin-top: -3rem;
+    margin-top: 0;
   }
   .valueRowHead,
   .valueRowDesc {
     grid-template-columns: 1fr;
     gap: 1rem;
+    margin-top: 1.5rem;
   }
   .valueDesc {
     padding: 0.6rem 0.75rem;
@@ -414,7 +415,7 @@
   .valueSpotlightWrap {
     grid-template-columns: 1fr;
     padding: 1.5rem 1rem;
-    margin-top: -1rem;
+    margin-top: 0;
   }
   .valueSpotlightWrap .spotlightTitle {
     font-size: 1.2rem;
