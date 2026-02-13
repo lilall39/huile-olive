@@ -1,12 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { NAV, SITE } from "@/lib/constants";
+import { NAV } from "@/lib/constants";
 import styles from "./Header.module.css";
 
 export function Header() {
   const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header className={styles.header}>
@@ -18,13 +20,28 @@ export function Header() {
             className={styles.logoImg}
           />
         </a>
-        <nav className={styles.nav} aria-label="Navigation principale">
+        <button
+          type="button"
+          className={styles.hamburger}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-expanded={menuOpen}
+          aria-label="Ouvrir le menu"
+        >
+          <span className={styles.hamburgerBar} />
+          <span className={styles.hamburgerBar} />
+          <span className={styles.hamburgerBar} />
+        </button>
+        <nav
+          className={`${styles.nav} ${menuOpen ? styles.navOpen : ""}`}
+          aria-label="Navigation principale"
+        >
           <ul className={styles.list}>
             {NAV.map(({ href, label }) => (
               <li key={href}>
                 <Link
                   href={href}
                   className={pathname === href ? styles.linkActive : styles.link}
+                  onClick={() => setMenuOpen(false)}
                 >
                   {label}
                 </Link>

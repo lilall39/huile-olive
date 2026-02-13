@@ -56,3 +56,25 @@
   font-size: 1.05rem;
   color: var(--gris-chaud);
 }
+
+@media (max-width: 768px) {
+  .hero {
+    padding: clamp(2rem, 8vw, 4rem) 1rem;
+  }
+  .heroTitle {
+    font-size: clamp(1.5rem, 5vw, 2.25rem);
+  }
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+  .list {
+    padding-left: 0.75rem;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 1.5rem 0.75rem;
+  }
+}

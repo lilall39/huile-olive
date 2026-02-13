@@ -73,3 +73,35 @@
   color: var(--gris-chaud);
   line-height: 1.6;
 }
+
+@media (max-width: 768px) {
+  .hero {
+    padding: clamp(2rem, 8vw, 4rem) 1rem;
+  }
+  .heroInner {
+    width: 100%;
+    padding: 1.25rem 1rem;
+  }
+  .heroTitle {
+    font-size: clamp(1.5rem, 5vw, 2.25rem);
+  }
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+  .contactBlock {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .formNote {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 1.5rem 0.75rem;
+  }
+  .heroInner {
+    padding: 1rem 0.75rem;
+  }
+}

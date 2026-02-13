@@ -148,9 +148,23 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding: clamp(2rem, 8vw, 4rem) 1rem;
+  }
+  .heroTextBlock {
+    padding: 1.25rem 1rem;
+  }
+  .heroTextBlock .heroTitle {
+    font-size: clamp(1.5rem, 5vw, 2.25rem);
+  }
+  .conceptContent {
+    padding: 1.25rem 1rem;
+  }
   .conceptCards {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
     min-height: 0;
+    padding: 0 0.5rem;
   }
   .conceptCards .block:nth-child(1),
   .conceptCards .block:nth-child(2),
@@ -158,12 +172,33 @@
     margin-top: 0;
     margin-left: 0;
     min-width: 0;
+    max-width: none;
     transform: none;
   }
   .conceptCards .block {
     margin-bottom: 1.5rem;
+    padding: 1rem 1.25rem;
   }
   .conceptCards .block:last-child {
     margin-bottom: 0;
+  }
+  .block h3 {
+    font-size: 1.2rem;
+  }
+  .ctaText {
+    margin: -2em 0 1rem 0;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 1.5rem 0.75rem;
+  }
+  .conceptCards .block {
+    padding: 0.75rem 1rem;
+  }
+  .ctaText {
+    margin: -1em 0 0.75rem 0;
   }
 }

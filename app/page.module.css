@@ -385,18 +385,90 @@
 }
 
 @media (max-width: 768px) {
-  .valueSpotlightWrap {
-    grid-template-columns: 1fr;
+  .hero {
+    min-height: 40vh;
+    padding: clamp(1rem, 5vw, 2rem) 1rem clamp(2rem, 8vw, 4rem);
+  }
+  .heroTitle {
+    font-size: clamp(1.6rem, 6vw, 2.5rem);
+  }
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+  .heroCta {
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  .value {
+    margin-top: -3rem;
   }
   .valueRowHead,
   .valueRowDesc {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .valueDesc {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.95rem;
+  }
+  .valueSpotlightWrap {
+    grid-template-columns: 1fr;
+    padding: 1.5rem 1rem;
+    margin-top: -1rem;
+  }
+  .valueSpotlightWrap .spotlightTitle {
+    font-size: 1.2rem;
+  }
+  .valueSpotlightWrap .spotlight .spotlightContent a {
+    font-size: 1.15rem;
+    padding: 0.5em 0.75em;
   }
   .spotlightCard {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   .spotlightVisual {
     order: -1;
     aspect-ratio: 16/10;
+  }
+  .ctaSection {
+    margin-top: -4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .ctaBottle {
+    max-width: 100%;
+  }
+  .ctaBottleBg {
+    padding: clamp(2.5rem, 10vw, 4rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 5vw, 2.5rem);
+  }
+  .ctaBottle::after {
+    top: -12px;
+    left: -12px;
+    right: -12px;
+    bottom: -12px;
+  }
+  .ctaBottle::before {
+    height: 14px;
+    border-width: 14px;
+  }
+  .ctaButtons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 0.75rem 0.75rem 1.5rem;
+  }
+  .heroTextBlock {
+    padding: 1rem 1rem;
+  }
+  .valueSpotlightWrap {
+    padding: 1rem 0.75rem;
+  }
+  .ctaSection {
+    margin-top: -2.5rem;
   }
 }

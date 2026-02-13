@@ -145,14 +145,44 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
   .heroGrid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .heroContent {
+    padding: 1.25rem 1rem;
+  }
+  .heroTitle {
+    font-size: clamp(1.5rem, 5vw, 2rem);
   }
   .heroVisual {
     order: -1;
     aspect-ratio: 16/10;
   }
+  .contenuSection {
+    padding: 1.25rem 1rem;
+  }
   .contenu {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 1rem;
+  }
+  .ctaText {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 1.5rem 0.75rem;
+  }
+  .heroContent {
+    padding: 1rem 0.75rem;
+  }
+  .contenuSection {
+    padding: 1rem 0.75rem;
   }
 }
