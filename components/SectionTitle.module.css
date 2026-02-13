@@ -42,6 +42,12 @@
   margin-right: 0; /* bloc à la limite droite de la page */
 }
 
+@media (max-width: 768px) {
+  .goutte {
+    margin-top: 2rem;
+  }
+}
+
 .goutte .heading {
   color: var(--olive-fonce);
 }
