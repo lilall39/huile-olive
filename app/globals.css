@@ -1,0 +1,79 @@
+/* --- Palette premium (direction artistique) --- */
+:root {
+  --olive-fonce: #3f5f4a;
+  --sage-doux: #a8b8a3;
+  --beige-clair: #efe9e2;
+  --blanc-casse: #faf9f6;
+  --gris-chaud: #6f6f6f;
+  --texte: #2d2d2d;
+  --texte-doux: #6f6f6f;
+  --goutte-huile: #d4a84b;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body), system-ui, sans-serif;
+  background: var(--blanc-casse);
+  background-image: linear-gradient(to bottom, rgba(250, 249, 246, 0.72) 0%, rgba(250, 249, 246, 0.82) 100%), url("/olivier-mature.png");
+  background-size: 110% auto;
+  background-position: center -8%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: var(--texte);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading), Georgia, serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--olive-fonce);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img:not([class*="logoIcon"]) {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utilitaires */
+.section {
+  padding: clamp(3rem, 8vw, 6rem) clamp(1.5rem, 5vw, 3rem);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section--narrow {
+  max-width: 720px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

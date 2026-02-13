@@ -1,0 +1,169 @@
+.hero {
+  padding: clamp(4rem, 12vw, 6rem) 1.5rem;
+  background: transparent;
+  text-align: center;
+}
+
+.heroInner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* Cadre même couleur qu’à l’accueil (olive-fonce) */
+.heroTextBlock {
+  background: color-mix(in srgb, var(--olive-fonce) 55%, var(--goutte-huile) 45%);
+  border: 2px solid var(--goutte-huile);
+  border-radius: 8px;
+  padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.heroTextBlock .heroTitle {
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 1rem 0;
+}
+
+.heroTextBlock .heroSubtitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.conceptContent {
+  background: var(--goutte-huile);
+  border: 2px solid var(--olive-fonce);
+  border-radius: 8px;
+}
+
+.conceptContent h2 {
+  color: var(--olive-fonce);
+}
+
+.conceptContent > div:first-child p {
+  color: #1a1a1a;
+}
+
+.conceptCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 2rem;
+  align-items: start;
+  max-width: 720px;
+  margin: 0 auto;
+  min-height: 0;
+  overflow: visible;
+}
+
+.conceptCards .block {
+  background: var(--goutte-huile);
+  border: 2px solid var(--olive-fonce);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  min-width: 22em;
+  max-width: 28em;
+}
+
+.conceptCards .block:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+  margin-top: -5em;
+  margin-left: 0;
+  justify-self: start;
+  width: 100%;
+  transform: rotate(-1.5deg) translateX(-50%);
+}
+
+.conceptCards .block:nth-child(1) p {
+  line-height: 1.5;
+}
+
+.conceptCards .block:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+  margin-top: -1.5em;
+  margin-left: auto;
+  justify-self: end;
+  transform: rotate(1.2deg);
+}
+
+.conceptCards .block:nth-child(3) {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  justify-self: center;
+  margin-top: 0;
+  margin-left: 0;
+  max-width: 28em;
+  transform: rotate(0.8deg);
+}
+
+.conceptCards .block h3 {
+  color: #0f1f14;
+  font-weight: 700;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.conceptCards .block p {
+  color: #1a1a1a;
+  line-height: 1.55;
+  font-weight: 700;
+}
+
+.block {
+  margin-bottom: 2.5rem;
+}
+
+.block h3 {
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0f1f14;
+  margin: 0 0 0.75rem 0;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.block p {
+  margin: 0;
+  color: var(--texte);
+  line-height: 1.7;
+}
+
+.cta {
+  text-align: center;
+  background: transparent;
+  padding-top: clamp(0.75rem, 2vw, 1.25rem);
+  padding-bottom: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+.ctaText {
+  margin: -5.5em 0 1rem 0;
+  font-size: calc(1.05rem + 2pt);
+  font-weight: bold;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .conceptCards {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .conceptCards .block:nth-child(1),
+  .conceptCards .block:nth-child(2),
+  .conceptCards .block:nth-child(3) {
+    margin-top: 0;
+    margin-left: 0;
+    min-width: 0;
+    transform: none;
+  }
+  .conceptCards .block {
+    margin-bottom: 1.5rem;
+  }
+  .conceptCards .block:last-child {
+    margin-bottom: 0;
+  }
+}

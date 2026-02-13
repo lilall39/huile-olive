@@ -1,0 +1,402 @@
+.hero {
+  min-height: calc(50vh - 6rem); /* remonté de 4 lignes (~6rem) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: clamp(1.5rem, 7vw, 3rem) 1.5rem clamp(3rem, 10vw, 6rem) 1.5rem; /* haut réduit de 2 lignes */
+}
+
+.heroInner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heroTextBlock {
+  background: var(--olive-fonce);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.25rem, 3vw, 1.75rem);
+  margin-bottom: 0.25rem; /* remonté d’une ligne (était 1.75rem) */
+}
+
+.heroTextBlock .heroLabel {
+  color: var(--blanc-casse);
+}
+
+.heroTextBlock .heroTitle {
+  color: var(--blanc-casse);
+}
+
+.heroTextBlock .heroSubtitle {
+  color: var(--beige-clair);
+}
+
+.heroLabel {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--olive-fonce);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 1rem 0;
+}
+
+.heroTitle {
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 500;
+  color: var(--olive-fonce);
+  line-height: 1.2;
+  margin: 0 0 1.5rem 0;
+}
+
+.heroSubtitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--gris-chaud);
+  line-height: 1.65;
+  margin: 0 0 2rem 0;
+}
+
+.heroCta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem; /* descend d’une ligne pour équilibre visuel */
+}
+
+.value {
+  background: transparent;
+  margin-top: -6rem; /* remonté de 4 lignes */
+}
+
+.valueList {
+  margin: 0;
+  padding: 0;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* ~2 lignes entre titres et textes */
+}
+
+.valueRowHead {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem 1.5rem;
+  align-items: start;
+}
+
+.valueRowDesc {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem 1.5rem;
+  align-items: start;
+  font-size: 1.05rem;
+  color: var(--texte);
+  margin-top: -2em; /* réduit la marge en hauteur de 2 lignes */
+}
+
+.valueItemHead {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.valueDesc {
+  text-align: center;
+  background: rgba(212, 168, 75, 0.18);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  color: #0f0f0f;
+  font-weight: 600;
+}
+
+.valueItemHead strong {
+  display: inline-block;
+  background: var(--olive-fonce);
+  color: var(--blanc-casse);
+  padding: 0.4em 0.75em;
+  border-radius: 6px;
+  border-left: 3px solid var(--goutte-huile);
+  box-shadow: 0 2px 8px rgba(63, 95, 74, 0.25);
+}
+
+.valueIcon {
+  color: var(--sage-doux);
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+.valueArrow {
+  color: var(--goutte-huile);
+  font-size: 1.1em;
+  flex-shrink: 0;
+}
+
+/* Bloc value + spotlight côte à côte */
+.valueSpotlightWrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2rem;
+  align-items: start;
+  max-width: 1200px;
+  margin: -2rem auto 0 auto;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 5vw, 3rem);
+}
+
+.valueSpotlightWrap .section {
+  padding: 0;
+  max-width: none;
+}
+
+.valueSpotlightWrap .spotlightCard {
+  gap: 1rem;
+}
+
+.valueSpotlightWrap .spotlightTitle {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--blanc-casse);
+  text-shadow: none;
+  background: var(--olive-fonce);
+  border: 2px solid var(--olive-fonce);
+  border-radius: 6px;
+  padding: 0.4em 0.6em;
+  width: fit-content;
+  margin: 0;
+}
+
+.valueSpotlightWrap .spotlightSubtitle {
+  font-size: 1rem;
+}
+
+.valueSpotlightWrap .spotlightDesc {
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.valueSpotlightWrap .spotlightPrice {
+  font-size: 1.2rem;
+}
+
+.valueSpotlightWrap .spotlightVisual {
+  aspect-ratio: 1;
+  min-height: 0;
+}
+
+.valueSpotlightWrap .spotlightContent {
+  gap: 0.5rem;
+}
+
+.valueSpotlightWrap .spotlight {
+  background: rgba(212, 168, 75, 0.88);
+  border: 2px solid var(--olive-fonce);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.valueSpotlightWrap .spotlight .spotlightTitle {
+  color: var(--blanc-casse);
+}
+
+.valueSpotlightWrap .spotlight .spotlightPrice {
+  color: var(--olive-fonce);
+}
+
+.valueSpotlightWrap .spotlight .preco {
+  color: #000;
+  font-weight: 700;
+}
+
+.valueSpotlightWrap .spotlight .spotlightSubtitle {
+  color: #000;
+  font-size: 1.2rem;
+}
+
+.valueSpotlightWrap .spotlight .spotlightDesc {
+  color: #000;
+}
+
+.valueSpotlightWrap .spotlight .spotlightContent a {
+  background: var(--olive-fonce);
+  color: var(--blanc-casse);
+  border: 2px solid var(--olive-fonce);
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1.45rem;
+  padding: 0.4em 0.6em;
+}
+
+.valueSpotlightWrap .spotlight .spotlightContent a:hover {
+  background: color-mix(in srgb, var(--olive-fonce) 85%, #2d4538 15%);
+  color: var(--blanc-casse);
+  border-color: var(--olive-fonce);
+}
+
+.spotlight {
+  background: rgba(239, 233, 226, 0.82);
+}
+
+.spotlightCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.spotlightContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.spotlightTitle {
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--olive-fonce);
+  margin: 0;
+}
+
+.spotlightSubtitle {
+  font-size: 1rem;
+  color: var(--gris-chaud);
+  margin: 0;
+}
+
+.spotlightDesc {
+  margin: 0;
+  color: var(--texte);
+  line-height: 1.6;
+}
+
+.spotlightPrice {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--olive-fonce);
+  margin: 0.25rem 0 0 0;
+}
+
+.preco {
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--gris-chaud);
+}
+
+.spotlightVisual {
+  aspect-ratio: 4/3;
+  background: rgba(168, 184, 163, 0.75);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spotlightPlaceholder {
+  color: var(--olive-fonce);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 1.25rem;
+  opacity: 0.7;
+}
+
+.ctaSection {
+  text-align: center;
+  margin-top: -10.5rem;
+}
+
+/* Forme bouteille (clip-path) — contour complet via couche olive derrière */
+.ctaBottle {
+  --bottle-clip: polygon(
+    42% 0%, 58% 0%,
+    60% 2%, 60% 22%,
+    98% 22%, 98% 92%,
+    90% 98%, 10% 98%, 2% 92%, 2% 22%,
+    40% 22%, 40% 2%
+  );
+  position: relative;
+  max-width: 520px;
+  margin: 0 auto;
+  isolation: isolate;
+}
+
+.ctaBottleBg {
+  padding: clamp(4rem, 12vw, 6rem) clamp(1.5rem, 4vw, 2.5rem) clamp(2rem, 5vw, 3.5rem);
+  background: var(--goutte-huile);
+  clip-path: var(--bottle-clip);
+  position: relative;
+  z-index: 2;
+}
+
+/* Contour épais vert olive tout autour (couche derrière) */
+.ctaBottle::after {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: -24px;
+  right: -24px;
+  bottom: -24px;
+  background: var(--olive-fonce);
+  clip-path: var(--bottle-clip);
+  z-index: -1;
+}
+
+/* Bord / ouverture en haut du goulot */
+.ctaBottle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 42%;
+  width: 16%;
+  height: 24px;
+  border: 24px solid var(--olive-fonce);
+  border-bottom: none;
+  border-radius: 2px 2px 0 0;
+  box-sizing: border-box;
+  background: var(--goutte-huile);
+  z-index: 3;
+}
+
+.ctaBottleBg > div:first-child {
+  margin-top: 1em;
+}
+
+.ctaBottleBg p {
+  color: #000;
+}
+
+.ctaButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.ctaLink {
+  margin-left: 0.5rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .valueSpotlightWrap {
+    grid-template-columns: 1fr;
+  }
+  .valueRowHead,
+  .valueRowDesc {
+    grid-template-columns: 1fr;
+  }
+  .spotlightCard {
+    grid-template-columns: 1fr;
+  }
+  .spotlightVisual {
+    order: -1;
+    aspect-ratio: 16/10;
+  }
+}

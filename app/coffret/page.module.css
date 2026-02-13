@@ -1,0 +1,158 @@
+.hero {
+  padding: clamp(3rem, 8vw, 5rem) 1.5rem;
+  background: linear-gradient(180deg, rgba(239, 233, 226, 0.01) 0%, rgba(250, 249, 246, 0.05) 60%);
+}
+
+.heroGrid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--goutte-huile);
+  border: 2px solid color-mix(in srgb, var(--goutte-huile) 55%, var(--olive-fonce) 45%);
+  border-radius: 8px;
+  padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.25rem, 3vw, 1.75rem);
+}
+
+.heroTitle {
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--olive-fonce);
+  margin: 0;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+
+.heroDesc {
+  margin: 0;
+  line-height: 1.65;
+  font-weight: 700;
+  color: #000;
+}
+
+.priceBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0.5rem 0;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--olive-fonce);
+}
+
+.preco {
+  font-size: 0.9rem;
+  color: var(--gris-chaud);
+}
+
+.heroVisual {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroVisualImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border: 3px solid var(--goutte-huile);
+  border-radius: 8px;
+}
+
+.contenuSection {
+  background: var(--olive-fonce);
+  border: 2px solid var(--goutte-huile);
+  border-radius: 8px;
+  padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.25rem, 3vw, 1.75rem);
+  color: var(--blanc-casse);
+}
+
+.contenuSection h2,
+.contenuSection p {
+  color: var(--blanc-casse);
+}
+
+.contenu {
+  list-style: none;
+  margin: 1.5rem 0 0 0;
+  padding: 0;
+  max-width: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem 2rem;
+}
+
+.contenuItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  align-items: flex-start;
+  padding: 0;
+  border-bottom: none;
+}
+
+.contenuVolume {
+  font-weight: 600;
+  color: var(--blanc-casse);
+  min-width: auto;
+}
+
+.contenuNom {
+  display: block;
+  font-family: var(--font-heading), Georgia, serif;
+  color: var(--blanc-casse);
+  margin-bottom: 0;
+}
+
+.contenuTerroir,
+.contenuVariete {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(250, 249, 246, 0.9);
+}
+
+.cta {
+  text-align: center;
+  background: transparent;
+}
+
+.ctaText {
+  margin: 0 0 1rem 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+  }
+  .heroVisual {
+    order: -1;
+    aspect-ratio: 16/10;
+  }
+  .contenu {
+    grid-template-columns: 1fr;
+  }
+}

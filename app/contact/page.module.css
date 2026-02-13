@@ -1,0 +1,75 @@
+.hero {
+  padding: clamp(4rem, 12vw, 6rem) 1.5rem;
+  background: transparent;
+  text-align: center;
+}
+
+.heroInner {
+  max-width: 640px;
+  margin: 0 auto;
+  width: fit-content;
+  background: var(--goutte-huile);
+  border: 2px solid var(--olive-fonce);
+  border-radius: 8px;
+  padding: clamp(1.25rem, 3vw, 1.75rem) clamp(1.5rem, 4vw, 2rem);
+}
+
+.heroTitle {
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 1rem 0;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.heroSubtitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.6;
+  margin: 0;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.contactBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.contactItem {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contactItem strong {
+  font-size: 0.9rem;
+  color: var(--gris-chaud);
+  font-weight: 500;
+}
+
+.contactItem a {
+  font-size: 1.1rem;
+  color: var(--olive-fonce);
+}
+
+.contactItem a:hover {
+  text-decoration: underline;
+}
+
+.formNote {
+  padding: 1.5rem;
+  background: rgba(239, 233, 226, 0.82);
+  border-radius: 4px;
+}
+
+.formNote p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--gris-chaud);
+  line-height: 1.6;
+}
