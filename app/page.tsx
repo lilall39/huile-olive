@@ -7,6 +7,10 @@ export default function HomePage() {
   return (
     <>
       <section className={styles.hero}>
+        <video autoPlay muted loop playsInline className={styles.heroVideo}>
+          <source src="/videoolive.mp4" type="video/mp4" />
+        </video>
+        <div className={styles.heroOverlay} />
         <div className={styles.heroInner}>
           <div className={styles.heroTextBlock}>
             <p className={styles.heroLabel}>{SITE.tagline}</p>
