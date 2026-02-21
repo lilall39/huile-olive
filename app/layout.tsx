@@ -32,6 +32,12 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${heading.variable} ${body.variable}`}>
       <body style={{ fontFamily: "var(--font-body)" }}>
+        <div className="videoBackground">
+          <video autoPlay muted loop playsInline>
+            <source src="/videoolive.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div className="videoOverlay" />
         <Header />
         <main>{children}</main>
         <Footer />
