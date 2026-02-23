@@ -35,7 +35,7 @@
 
 .list li {
   padding-left: 1rem;
-  border-left: 3px solid var(--sage-doux);
+  border-left: 4px solid var(--border-color);
   line-height: 1.6;
   color: var(--texte);
 }

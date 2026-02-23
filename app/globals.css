@@ -1,6 +1,6 @@
 /* --- Palette premium (direction artistique) --- */
 :root {
-  --olive-fonce: #b0af86;
+  --olive-fonce: #9c824a;
   --sage-doux: #a8b8a3;
   --beige-clair: #efe9e2;
   --blanc-casse: #faf9f6;
@@ -8,6 +8,7 @@
   --texte: #2d2d2d;
   --texte-doux: #6f6f6f;
   --goutte-huile: #d4a84b;
+  --border-color: #9c824a;
 }
 
 *,
@@ -24,9 +25,11 @@ body {
   margin: 0;
   font-family: var(--font-body), system-ui, sans-serif;
   background: var(--blanc-casse);
-  background-image: linear-gradient(to bottom, rgba(250, 249, 246, 0.72) 0%, rgba(250, 249, 246, 0.82) 100%), url("/olivier-mature.png");
-  background-size: 110% auto;
-  background-position: center -8%;
+  background-image: 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.15) 100%),
+    url("/background-olive.png");
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   color: var(--texte);

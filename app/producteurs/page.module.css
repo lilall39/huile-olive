@@ -33,7 +33,7 @@
 
 .card {
   background: rgba(250, 249, 246, 0.85);
-  border: 1px solid var(--beige-clair);
+  border: 2px solid var(--border-color);
   border-radius: 4px;
   overflow: hidden;
   display: flex;

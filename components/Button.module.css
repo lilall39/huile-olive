@@ -23,11 +23,13 @@
 .primary {
   background: color-mix(in srgb, var(--olive-fonce) 55%, var(--goutte-huile) 45%);
   color: var(--blanc-casse);
+  border: 3px solid var(--border-color);
 }
 
 .primary:hover {
   background: color-mix(in srgb, var(--olive-fonce) 65%, var(--goutte-huile) 35%);
   text-decoration: none;
+  border-color: var(--border-color);
 }
 
 .secondary {
@@ -41,13 +43,14 @@
 }
 
 .outline {
-  background: color-mix(in srgb, var(--olive-fonce) 55%, var(--goutte-huile) 45%);
-  color: var(--blanc-casse);
-  border: 1px solid transparent;
+  background: transparent;
+  color: var(--olive-fonce);
+  border: 3px solid var(--border-color);
 }
 
 .outline:hover {
-  background: color-mix(in srgb, var(--olive-fonce) 65%, var(--goutte-huile) 35%);
-  color: var(--blanc-casse);
+  background: rgba(156, 130, 74, 0.1);
+  color: var(--olive-fonce);
   text-decoration: none;
+  border-color: var(--border-color);
 }

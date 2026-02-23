@@ -1,19 +1,45 @@
 import { SectionTitle } from "@/components/SectionTitle";
 import { Button } from "@/components/Button";
+import { SITE } from "@/lib/constants";
 import styles from "./page.module.css";
 
 export default function ConceptPage() {
   return (
     <>
       <section className={styles.hero}>
+        <video autoPlay muted loop playsInline className={styles.heroVideo}>
+          <source src="/ooo.mp4" type="video/mp4" />
+        </video>
+        <div className={styles.heroOverlay} />
         <div className={styles.heroInner}>
           <div className={styles.heroTextBlock}>
-            <h1 className={styles.heroTitle}>Le concept</h1>
-            <p className={styles.heroSubtitle}>
-              Curateur d'huiles primées. Nous ne produisons pas — nous sélectionnons,
-              nous mettons en valeur, nous proposons. Notre rôle est de repérer
-              l'excellence déjà reconnue et de la rendre accessible dans un cadre premium.
+            <p className={styles.heroLabel}>
+              <span className={styles.animateLine} style={{ animationDelay: '0ms' }}>
+                {SITE.tagline}
+              </span>
             </p>
+            <h1 className={styles.heroTitle}>
+              <span className={styles.animateLine} style={{ animationDelay: '150ms' }}>
+                Le concept
+              </span>
+            </h1>
+            <p className={styles.heroSubtitle}>
+              <span className={styles.animateLine} style={{ animationDelay: '300ms' }}>
+                Curateur d'huiles primées. Nous ne produisons pas — nous sélectionnons,
+                nous mettons en valeur, nous proposons. Notre rôle est de repérer
+                l'excellence déjà reconnue et de la rendre accessible dans un cadre premium.
+              </span>
+            </p>
+          </div>
+          <div className={styles.heroCta}>
+            <div className={styles.animateLine} style={{ animationDelay: '450ms', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <Button href="/coffret" variant="primary" size="large">
+                Découvrir le coffret
+              </Button>
+              <Button href="/producteurs" variant="outline" size="large">
+                Voir les producteurs
+              </Button>
+            </div>
           </div>
         </div>
       </section>

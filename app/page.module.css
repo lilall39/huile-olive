@@ -41,8 +41,8 @@
 }
 
 .heroTextBlock {
-  background: var(--olive-fonce);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  border: none;
   border-radius: 8px;
   padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.25rem, 3vw, 1.75rem);
   margin-bottom: 0.25rem; /* remonté d’une ligne (était 1.75rem) */
@@ -94,9 +94,37 @@
   margin-top: 1.5rem; /* descend d’une ligne pour équilibre visuel */
 }
 
-.value {
-  background: transparent;
-  margin-top: -6rem; /* remonté de 4 lignes */
+.animateLine {
+  display: inline-block;
+  opacity: 0;
+  animation: heroFadeLoop 7s infinite both;
+}
+
+@keyframes heroFadeLoop {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  8% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  88% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+.value .sectionTitle {
+  margin-bottom: 2rem;
 }
 
 .valueList {
@@ -109,53 +137,49 @@
   gap: 0.5rem; /* ~2 lignes entre titres et textes */
 }
 
-.valueRowHead {
+.valueGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem 1.5rem;
-  align-items: start;
+  gap: 1.5rem;
+  align-items: stretch;
 }
 
-.valueRowDesc {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem 1.5rem;
-  align-items: start;
-  font-size: 1.05rem;
-  color: var(--texte);
-  margin-top: -2em; /* réduit la marge en hauteur de 2 lignes */
-}
-
-.valueItemHead {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem 1rem;
-  align-items: center;
-  justify-content: center;
-}
-
-.valueDesc {
-  text-align: center;
-  background: rgba(212, 168, 75, 0.18);
-  border-radius: 6px;
-  padding: 0.75rem 1rem;
-  color: #0f0f0f;
-  font-weight: 600;
-}
-
-.valueItemHead strong {
-  display: inline-block;
+.valueCard {
   background: var(--olive-fonce);
-  color: var(--blanc-casse);
-  padding: 0.4em 0.75em;
-  border-radius: 6px;
-  border-left: 3px solid var(--goutte-huile);
-  box-shadow: 0 2px 8px rgba(176, 175, 134, 0.25);
+  border: 3px solid #cfa652;
+  border-radius: 8px;
+  padding: 0.4rem 0.75rem 0.75rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.valueCardHead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.valueCardHead strong {
+  font-size: 1.1rem;
+  color: #3d2b1f;
+  line-height: 1.3;
+}
+
+.valueCardDesc {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #3d2b1f;
+  opacity: 0.95;
+  line-height: 1.5;
 }
 
 .valueIcon {
   color: var(--sage-doux);
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   flex-shrink: 0;
 }
 
@@ -168,10 +192,10 @@
 /* Bloc value + spotlight côte à côte */
 .valueSpotlightWrap {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 0.8fr;
   gap: 1.5rem 2rem;
   align-items: start;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: -2rem auto 0 auto;
   padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 5vw, 3rem);
 }
@@ -191,7 +215,7 @@
   color: var(--blanc-casse);
   text-shadow: none;
   background: var(--olive-fonce);
-  border: 2px solid var(--olive-fonce);
+  border: 3px solid var(--border-color);
   border-radius: 6px;
   padding: 0.4em 0.6em;
   width: fit-content;
@@ -221,8 +245,8 @@
 }
 
 .valueSpotlightWrap .spotlight {
-  background: rgba(212, 168, 75, 0.88);
-  border: 2px solid var(--olive-fonce);
+  background: rgb(212, 168, 75);
+  border: 3px solid var(--border-color);
   border-radius: 8px;
   padding: 1rem;
 }
@@ -252,7 +276,7 @@
 .valueSpotlightWrap .spotlight .spotlightContent a {
   background: var(--olive-fonce);
   color: var(--blanc-casse);
-  border: 2px solid var(--olive-fonce);
+  border: 3px solid var(--border-color);
   border-radius: 6px;
   font-weight: 700;
   font-size: 1.45rem;
@@ -262,11 +286,41 @@
 .valueSpotlightWrap .spotlight .spotlightContent a:hover {
   background: color-mix(in srgb, var(--olive-fonce) 85%, #2d4538 15%);
   color: var(--blanc-casse);
-  border-color: var(--olive-fonce);
+  border-color: var(--border-color);
 }
 
 .spotlight {
-  background: rgba(239, 233, 226, 0.82);
+  background: rgb(239, 233, 226);
+}
+
+.animateSlide {
+  display: block;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: spotlightSlideLoop 7s infinite both;
+}
+
+@keyframes spotlightSlideLoop {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  85% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  95% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
 }
 
 .spotlightCard {
@@ -318,12 +372,20 @@
 }
 
 .spotlightVisual {
-  aspect-ratio: 4/3;
-  background: rgba(168, 184, 163, 0.75);
-  border-radius: 4px;
+  aspect-ratio: 1;
+  background: transparent;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+.spotlightImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .spotlightPlaceholder {
@@ -338,72 +400,71 @@
   margin-top: -10.5rem;
 }
 
-/* Forme bouteille (clip-path) — contour complet via couche olive derrière */
+/* Forme bouteille via image de fond */
 .ctaBottle {
-  --bottle-clip: polygon(
-    42% 0%, 58% 0%,
-    60% 2%, 60% 22%,
-    98% 22%, 98% 92%,
-    90% 98%, 10% 98%, 2% 92%, 2% 22%,
-    40% 22%, 40% 2%
-  );
   position: relative;
-  max-width: 520px;
+  max-width: 600px;
   margin: 0 auto;
   isolation: isolate;
 }
 
-.ctaBottleBg {
-  padding: clamp(4rem, 12vw, 6rem) clamp(1.5rem, 4vw, 2.5rem) clamp(2rem, 5vw, 3.5rem);
-  background: var(--goutte-huile);
-  clip-path: var(--bottle-clip);
+.ctaContainer {
   position: relative;
-  z-index: 2;
+  width: 100%;
+  border: 3px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  line-height: 0;
 }
 
-/* Contour épais vert olive tout autour (couche derrière) */
-.ctaBottle::after {
-  content: "";
-  position: absolute;
-  top: -24px;
-  left: -24px;
-  right: -24px;
-  bottom: -24px;
-  background: var(--olive-fonce);
-  clip-path: var(--bottle-clip);
-  z-index: -1;
-}
-
-/* Bord / ouverture en haut du goulot */
-.ctaBottle::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 42%;
-  width: 16%;
-  height: 24px;
-  border: 24px solid var(--olive-fonce);
-  border-bottom: none;
-  border-radius: 2px 2px 0 0;
-  box-sizing: border-box;
-  background: var(--goutte-huile);
-  z-index: 3;
-}
-
-.ctaBottleBg > div:first-child {
-  margin-top: 1em;
-}
-
-.ctaBottleBg p {
-  color: #000;
+.ctaImg {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .ctaButtons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ctaMainButtonWrap {
+  position: absolute;
+  top: 22%; /* Niveau horizontal du bouchon */
+  right: 5%; /* À l'intérieur du padding de l'image */
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.ctaMainButtonWrap a {
+  font-size: 1.1rem;
+}
+
+.ctaB2BButtonWrap {
+  position: absolute;
+  top: 32%; /* Niveau horizontal du goulot */
+  left: 5%; /* À gauche de la bouteille */
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.ctaB2BButtonWrap a {
+  font-size: 1.1rem;
+}
+
+.ctaContactButtonWrap {
+  position: absolute;
+  top: 45%; /* En dessous de Offres B2B */
+  left: 5%;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.ctaContactButtonWrap a {
+  font-size: 1.1rem;
 }
 
 .ctaLink {
@@ -429,15 +490,12 @@
   .value {
     margin-top: 0;
   }
-  .valueRowHead,
-  .valueRowDesc {
+  .valueGrid {
     grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-top: 3.5rem;
+    gap: 1.5rem;
   }
-  .valueDesc {
-    padding: 0.6rem 0.75rem;
-    font-size: 0.95rem;
+  .valueCard {
+    padding: 1rem;
   }
   .valueSpotlightWrap {
     grid-template-columns: 1fr;
@@ -467,18 +525,12 @@
   .ctaBottle {
     max-width: 100%;
   }
-  .ctaBottleBg {
-    padding: clamp(2.5rem, 10vw, 4rem) clamp(1rem, 4vw, 1.5rem) clamp(1.5rem, 5vw, 2.5rem);
+  .ctaContainer {
+    padding: 0;
   }
-  .ctaBottle::after {
-    top: -12px;
-    left: -12px;
-    right: -12px;
-    bottom: -12px;
-  }
+  .ctaBottle::after,
   .ctaBottle::before {
-    height: 14px;
-    border-width: 14px;
+    display: none;
   }
   .ctaButtons {
     flex-direction: column;
