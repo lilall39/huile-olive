@@ -98,17 +98,17 @@
 }
 
 .contenuSection {
-  background: var(--olive-fonce);
-  border: 3px solid var(--border-color);
+  background: #eecb82; /* Or cuivré clair */
+  border: 3px solid #cfa652; /* Bordure or harmonisée */
   border-radius: 8px;
   padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.25rem, 3vw, 1.75rem);
-  color: var(--blanc-casse);
+  color: #0a140a;
   margin-top: 3rem; /* Espace ajouté pour ne plus toucher les cartes du haut */
 }
 
 .contenuSection h2,
 .contenuSection p {
-  color: var(--blanc-casse);
+  color: #0a140a;
 }
 
 .contenu {
