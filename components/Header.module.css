@@ -9,22 +9,22 @@
 .inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0.1rem 1.5rem; /* Réduit et équilibré haut/bas */
+  padding: 0.25rem 1.5rem 0rem 1.5rem; /* Rétablissement de la hauteur desktop */
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
 }
 
-/* Logo : réduit de 30% supplémentaire */
+/* Logo : rétabli sur desktop */
 .logo {
   display: block;
   margin: 0;
   padding: 0;
   line-height: 0;
   text-decoration: none;
-  width: 164px; 
-  height: 56px; 
+  width: 234px; 
+  height: 80px; 
   flex-shrink: 0;
 }
 
@@ -37,8 +37,8 @@
   display: block;
   width: 100%;
   height: 100%;
-  max-width: 164px; 
-  max-height: 56px; 
+  max-width: 234px; 
+  max-height: 80px; 
   object-fit: contain;
   object-position: left center;
 }
