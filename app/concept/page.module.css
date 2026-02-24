@@ -94,6 +94,35 @@
   color: #0a140a !important;
 }
 
+.animateSlide {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: slideInLoop 8s infinite both;
+}
+
+@keyframes slideInLoop {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  85% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  95% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+}
+
 .animateLine {
   display: inline-block;
   opacity: 0;
