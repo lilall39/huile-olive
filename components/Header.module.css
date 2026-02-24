@@ -9,22 +9,22 @@
 .inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0.25rem 1.5rem 0rem 1.5rem; /* Bas réduit à 0 pour gagner de la hauteur */
+  padding: 0.1rem 1.5rem; /* Réduit et équilibré haut/bas */
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
 }
 
-/* Logo : agrandi, marges nav/hamburger inchangées */
+/* Logo : réduit de 30% supplémentaire */
 .logo {
   display: block;
   margin: 0;
   padding: 0;
   line-height: 0;
   text-decoration: none;
-  width: 234px; /* Réduit de 10% (était 260px) */
-  height: 80px; /* Réduit de 10% (était 89px) */
+  width: 164px; 
+  height: 56px; 
   flex-shrink: 0;
 }
 
@@ -37,8 +37,8 @@
   display: block;
   width: 100%;
   height: 100%;
-  max-width: 234px; /* Réduit de 10% */
-  max-height: 80px; /* Réduit de 10% */
+  max-width: 164px; 
+  max-height: 56px; 
   object-fit: contain;
   object-position: left center;
 }
@@ -106,35 +106,35 @@
 
 @media (max-width: 768px) {
   .header {
-    border-bottom-width: 2px;
+    border-bottom-width: 1px;
   }
 
   .inner {
-    padding: 0.15rem 1rem;
+    padding: 0.1rem 1rem;
   }
 
   .logo {
-    width: 50px;
-    height: 17px;
+    width: 35px;
+    height: 12px;
   }
 
   .logoImg {
-    max-width: 50px;
-    max-height: 17px;
+    max-width: 35px;
+    max-height: 12px;
   }
 
   .hamburger {
     display: flex;
     order: 2;
-    width: 32px;
-    height: 32px;
-    border-width: 2px;
-    gap: 3px;
+    width: 24px;
+    height: 24px;
+    border-width: 1px;
+    gap: 2px;
   }
 
   .hamburgerBar {
-    width: 16px;
-    height: 1.5px;
+    width: 12px;
+    height: 1px;
   }
 
   .nav {
