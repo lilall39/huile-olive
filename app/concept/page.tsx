@@ -51,7 +51,7 @@ export default function ConceptPage() {
             est attestée par des jurys indépendants.
           </p>
         </div>
-        <div className={`${styles.block} ${styles.animateSlide}`} style={{ animationDelay: '200ms' }}>
+        <div className={`${styles.block} ${styles.animateSlide}`} style={{ animationDelay: '400ms' }}>
           <h3>Les producteurs au premier plan</h3>
           <p>
             Chaque bouteille est liée à un producteur, un terroir, un
@@ -60,7 +60,7 @@ export default function ConceptPage() {
             médailles.
           </p>
         </div>
-        <div className={`${styles.block} ${styles.animateSlide}`} style={{ animationDelay: '400ms' }}>
+        <div className={`${styles.block} ${styles.animateSlide}`} style={{ animationDelay: '800ms' }}>
           <h3>Vision à long terme</h3>
           <p>
             Nous démarrons avec un coffret dégustation en série courte pour
