@@ -291,27 +291,46 @@
     order: -1;
     aspect-ratio: 1/1;
     border-radius: 12px;
+    overflow: hidden;
   }
+
+  .heroVisualImg {
+    width: 150% !important;
+    max-width: none !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    animation: imageSlideLoop 12s ease-in-out infinite;
+  }
+
   .contenuSection {
     padding: 1.4rem 1.5rem 2.1rem 1.5rem;
     margin-top: 4rem;
     border-radius: 12px;
   }
+
   .contenu {
     gap: 0.5rem;
   }
+
   .accordionHeader {
     font-size: 1.05rem;
     padding: 0.6rem 0;
   }
+
   .accordionDetails {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+
   .ctaText {
     font-size: 1.2rem;
     margin: 2rem 0;
   }
+}
+
+@keyframes imageSlideLoop {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-33.33%); }
 }
 
 @media (max-width: 480px) {
