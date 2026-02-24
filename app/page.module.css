@@ -171,6 +171,17 @@
   animation: rotate 4s linear infinite;
 }
 
+.mobileSun {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.mobileSun svg {
+  animation: rotate 4s linear infinite;
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -596,6 +607,10 @@
   .heroTextBlock {
     padding: 0.5rem 0;
     margin-bottom: 0;
+  }
+
+  .mobileSun {
+    display: flex;
   }
 
   .valueSpotlightWrap {
