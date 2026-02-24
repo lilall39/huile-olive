@@ -64,7 +64,7 @@ export default function CoffretPage() {
 
       <section className={`section ${styles.contenuSection}`}>
         <SectionTitle
-          title="Le contenu du coffret"
+          title="Le contenu du coffret :"
           subtitle="Trois bouteilles d’huile extra vierge médaillées, trois profils distincts."
         />
         
