@@ -11,25 +11,26 @@
 }
 
 .normal {
-  padding: 0.75rem 1.5rem;
+  padding: 0.6rem 1.2rem;
   font-size: 0.95rem;
 }
 
 .large {
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.6rem;
   font-size: 1rem;
 }
 
 .primary {
-  background: color-mix(in srgb, var(--olive-fonce) 55%, var(--goutte-huile) 45%);
-  color: var(--blanc-casse);
-  border: 3px solid var(--border-color);
+  background: linear-gradient(135deg, #e5b350 0%, #c49133 100%);
+  color: #faf9f6; /* On garde le blanc pour le bouton pour la lisibilité */
+  border: 3px solid #f2c94c;
+  box-shadow: 0 4px 15px rgba(196, 145, 51, 0.4);
 }
 
 .primary:hover {
-  background: color-mix(in srgb, var(--olive-fonce) 65%, var(--goutte-huile) 35%);
+  background: linear-gradient(135deg, #f2c94c 0%, #e5b350 100%);
   text-decoration: none;
-  border-color: var(--border-color);
+  border-color: #ffd700;
 }
 
 .secondary {
@@ -44,13 +45,13 @@
 
 .outline {
   background: transparent;
-  color: var(--olive-fonce);
+  color: var(--texte);
   border: 3px solid var(--border-color);
 }
 
 .outline:hover {
   background: rgba(156, 130, 74, 0.1);
-  color: var(--olive-fonce);
+  color: var(--texte);
   text-decoration: none;
   border-color: var(--border-color);
 }

@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--blanc-casse);
+  background: #ebebeb; /* Couleur exacte du fond de la vidéo (issue de la capture) */
   border-bottom: 4px solid var(--border-color);
 }
 
@@ -23,8 +23,8 @@
   padding: 0;
   line-height: 0;
   text-decoration: none;
-  width: 320px;
-  height: 110px;
+  width: 260px;
+  height: 89px;
   flex-shrink: 0;
 }
 
@@ -37,8 +37,8 @@
   display: block;
   width: 100%;
   height: 100%;
-  max-width: 320px;
-  max-height: 110px;
+  max-width: 260px;
+  max-height: 89px;
   object-fit: contain;
   object-position: left center;
 }
@@ -67,7 +67,7 @@
 
 .link:hover,
 .linkActive {
-  color: var(--olive-fonce);
+  color: #1b2614; /* Un vert un peu plus clair pour le hover */
 }
 
 .linkActive {
@@ -85,8 +85,9 @@
   padding: 0;
   border: 3px solid var(--border-color);
   border-radius: 6px;
-  background: var(--blanc-casse);
+  background: #faf9f6; /* Fond blanc cassé forcé */
   cursor: pointer;
+  z-index: 1001; /* Au-dessus du panneau nav */
   transition: background 0.2s;
 }
 
@@ -109,13 +110,13 @@
   }
 
   .logo {
-    width: 160px;
-    height: 55px;
+    width: 130px;
+    height: 45px;
   }
 
   .logoImg {
-    max-width: 160px;
-    max-height: 55px;
+    max-width: 130px;
+    max-height: 45px;
   }
 
   .hamburger {
@@ -129,9 +130,11 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(250, 249, 246, 0.98);
-    z-index: 98;
+    background: #faf9f6; /* Fond blanc cassé forcé */
+    z-index: 1000; /* Z-index très élevé pour être au-dessus du fond noir */
     flex: none;
+    display: flex; /* S'assurer qu'il est en flex pour le centrage */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 5rem 1.5rem 2rem;
@@ -147,19 +150,16 @@
 
   .list {
     flex-direction: column;
-    gap: 0.5rem 1rem;
+    gap: 1.5rem;
     align-items: center;
     text-align: center;
   }
 
-  .list li {
-    width: 100%;
-  }
-
   .link {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     display: block;
     padding: 0.75rem 1rem;
+    color: #0a140a !important; /* Texte vert très foncé forcé pour être visible sur le blanc */
   }
 }
 

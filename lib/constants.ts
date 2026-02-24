@@ -14,7 +14,6 @@ export const SITE = {
 export const NAV = [
   { href: "/", label: "Accueil" },
   { href: "/concept", label: "Le concept" },
-  { href: "/producteurs", label: "Les producteurs" },
   { href: "/coffret", label: "Le coffret" },
   { href: "/b2b", label: "B2B & Cadeaux" },
   { href: "/contact", label: "Contact" },

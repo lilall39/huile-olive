@@ -5,8 +5,8 @@
   --beige-clair: #efe9e2;
   --blanc-casse: #faf9f6;
   --gris-chaud: #6f6f6f;
-  --texte: #2d2d2d;
-  --texte-doux: #6f6f6f;
+  --texte: #0a140a;
+  --texte-doux: #1b2614;
   --goutte-huile: #d4a84b;
   --border-color: #9c824a;
 }
@@ -24,14 +24,7 @@ html {
 body {
   margin: 0;
   font-family: var(--font-body), system-ui, sans-serif;
-  background: var(--blanc-casse);
-  background-image: 
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.15) 100%),
-    url("/background-olive.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  background: #000;
   color: var(--texte);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;

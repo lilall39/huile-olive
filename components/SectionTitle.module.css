@@ -10,15 +10,17 @@
   font-family: var(--font-heading), Georgia, serif;
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 500;
-  color: var(--olive-fonce);
+  color: var(--texte);
   margin: 0 0 0.5rem 0;
 }
 
 .subtitle {
   margin: 0;
   font-size: 1.1rem;
-  color: var(--gris-chaud);
+  color: var(--texte);
+  opacity: 0.8;
   max-width: 40ch;
+  font-weight: 700;
 }
 
 .center .subtitle {
@@ -28,8 +30,9 @@
 
 /* Cadre avec fond couleur goutte d’huile — épouse le texte */
 .goutte {
-  background: var(--goutte-huile);
-  border: 3px solid var(--border-color);
+  background: #d7d7d7;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.4);
   border-radius: 8px;
   padding: 0.6rem 1rem;
   width: fit-content;
@@ -49,7 +52,7 @@
 }
 
 .goutte .heading {
-  color: #3d2b1f; /* Un marron plus sombre et profond pour une visibilité maximale */
+  color: var(--texte);
 }
 
 .goutte .subtitle {

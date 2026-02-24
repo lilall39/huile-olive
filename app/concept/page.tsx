@@ -1,14 +1,23 @@
+"use client";
+
+import { useState } from "react";
 import { SectionTitle } from "@/components/SectionTitle";
 import { Button } from "@/components/Button";
 import { SITE } from "@/lib/constants";
 import styles from "./page.module.css";
 
 export default function ConceptPage() {
+  const [zoomedIndex, setZoomedIndex] = useState<number | null>(null);
+
+  const toggleZoom = (index: number) => {
+    setZoomedIndex(zoomedIndex === index ? null : index);
+  };
+
   return (
     <>
       <section className={styles.hero}>
         <video autoPlay muted loop playsInline className={styles.heroVideo}>
-          <source src="/ooo.mp4" type="video/mp4" />
+          <source src="/oliveconcept.mp4" type="video/mp4" />
         </video>
         <div className={styles.heroOverlay} />
         <div className={styles.heroInner}>
@@ -35,9 +44,6 @@ export default function ConceptPage() {
             <div className={styles.animateLine} style={{ animationDelay: '450ms', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <Button href="/coffret" variant="primary" size="large">
                 Découvrir le coffret
-              </Button>
-              <Button href="/producteurs" variant="outline" size="large">
-                Voir les producteurs
               </Button>
             </div>
           </div>
@@ -74,13 +80,49 @@ export default function ConceptPage() {
         </div>
       </section>
 
-      <section className={`section ${styles.cta}`}>
-        <p className={styles.ctaText}>
-          Découvrez les trois producteurs de notre coffret et leur terroir.
-        </p>
-        <Button href="/producteurs" variant="primary" size="large">
-          Voir les producteurs
-        </Button>
+      <section className={styles.carouselContainer}>
+        <div className={styles.secondaryCards}>
+          {[0, 1, 2, 3, 4].map((i) => (
+            <div key={`card-${i}`} className={styles.cardWrapper}>
+              <div 
+                className={`${styles.block} ${zoomedIndex === i ? styles.zoomed : ""}`}
+                onClick={() => toggleZoom(i)}
+              >
+                <img src="/concept-card-1.png" alt="Domaine des Oliviers de Kabylie" className={styles.cardImg} />
+              </div>
+              {i < 4 && (
+                <div className={styles.arrow}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#f2c94c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+              )}
+            </div>
+          ))}
+          {/* Duplication pour la boucle infinie */}
+          <div className={styles.arrow}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#f2c94c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+          {[0, 1, 2, 3, 4].map((i) => (
+            <div key={`card-clone-${i}`} className={styles.cardWrapper}>
+              <div 
+                className={`${styles.block} ${zoomedIndex === i + 5 ? styles.zoomed : ""}`}
+                onClick={() => toggleZoom(i + 5)}
+              >
+                <img src="/concept-card-1.png" alt="Domaine des Oliviers de Kabylie" className={styles.cardImg} />
+              </div>
+              {i < 4 && (
+                <div className={styles.arrow}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#f2c94c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </section>
     </>
   );

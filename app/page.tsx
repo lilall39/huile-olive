@@ -8,14 +8,14 @@ export default function HomePage() {
     <>
       <section className={styles.hero}>
         <video autoPlay muted loop playsInline className={styles.heroVideo}>
-          <source src="/videoolive_deux.mp4" type="video/mp4" />
+          <source src="/oolivevideo.mp4" type="video/mp4" />
         </video>
         <div className={styles.heroOverlay} />
         <div className={styles.heroInner}>
           <div className={styles.heroTextBlock}>
             <p className={styles.heroLabel}>
               <span className={styles.animateLine} style={{ animationDelay: '0ms' }}>
-                {SITE.tagline}
+                Nous ne produisons pas, nous sélectionnons pour vous les huiles extra vierge de haute qualité
               </span>
             </p>
             <h1 className={styles.heroTitle}>
@@ -29,9 +29,6 @@ export default function HomePage() {
             </h1>
             <p className={styles.heroSubtitle}>
               <span className={styles.animateLine} style={{ animationDelay: '450ms' }}>
-                Nous ne produisons pas. Nous sélectionnons pour vous les huiles
-                extra vierge déjà médaillées, et mettons en valeur ceux qui les
-                font.
               </span>
             </p>
           </div>
@@ -40,7 +37,7 @@ export default function HomePage() {
               <Button href="/coffret" variant="primary" size="large">
                 Découvrir le coffret
               </Button>
-              <Button href="/concept" variant="outline" size="large">
+              <Button href="/concept" variant="primary" size="large">
                 Notre démarche
               </Button>
             </div>
@@ -94,9 +91,8 @@ export default function HomePage() {
             <p className={`${styles.spotlightSubtitle} ${styles.animateSlide}`} style={{ animationDelay: '150ms' }}>{COFFRET.sousTitre}</p>
             <p className={`${styles.spotlightDesc} ${styles.animateSlide}`} style={{ animationDelay: '300ms' }}>{COFFRET.description}</p>
             <p className={`${styles.spotlightPrice} ${styles.animateSlide}`} style={{ animationDelay: '450ms' }}>
-              {COFFRET.prix} {COFFRET.devise}
               {COFFRET.precommande && (
-                <span className={styles.preco}> — Précommande</span>
+                <span className={styles.preco}>Précommande</span>
               )}
             </p>
             <div className={styles.animateSlide} style={{ animationDelay: '600ms' }}>
@@ -119,24 +115,7 @@ export default function HomePage() {
       <section className={`section ${styles.ctaSection}`}>
         <div className={styles.ctaBottle}>
           <div className={`${styles.ctaContainer} ${styles.animateSlide}`}>
-            <img src="/cta-final.png" alt="" className={styles.ctaImg} />
-            <div className={styles.ctaButtons}>
-              <div className={styles.ctaMainButtonWrap}>
-                <Button href="/coffret" variant="primary" size="large">
-                  Commander le coffret
-                </Button>
-              </div>
-              <div className={styles.ctaB2BButtonWrap}>
-                <Button href="/b2b" variant="primary" size="large">
-                  Offres B2B
-                </Button>
-              </div>
-              <div className={styles.ctaContactButtonWrap}>
-                <Button href="/contact" variant="primary" size="large">
-                  Nous contacter
-                </Button>
-              </div>
-            </div>
+            <img src="/cta-coffret.png" alt="Coffret NAFEES" className={styles.ctaImg} />
           </div>
         </div>
       </section>
