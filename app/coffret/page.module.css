@@ -185,7 +185,7 @@
   height: 18px;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 1;
-  color: #cfa652; /* Couleur or harmonisée avec les bordures */
+  color: #000; /* Retour au noir pour une meilleure visibilité */
 }
 
 .accordionIconActive {
