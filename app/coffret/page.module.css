@@ -98,17 +98,17 @@
 }
 
 .contenuSection {
-  background: #f9edd0; /* Or cuivré éclairci de deux tons */
+  background: #4a2c2a; /* Marron bois acajou foncé */
   border: 3px solid #cfa652; /* Bordure or harmonisée */
   border-radius: 8px;
   padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.25rem, 3vw, 1.75rem);
-  color: #0a140a;
+  color: var(--blanc-casse);
   margin-top: 3rem; /* Espace ajouté pour ne plus toucher les cartes du haut */
 }
 
 .contenuSection h2,
 .contenuSection p {
-  color: #0a140a;
+  color: var(--blanc-casse);
 }
 
 .contenu {
