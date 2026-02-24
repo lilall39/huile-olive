@@ -184,7 +184,7 @@
   overflow: hidden; /* Retour à hidden pour le scroll horizontal */
   position: relative;
   margin: -8rem 0 4rem 0; /* Remonté encore de 10% environ (de -6rem à -8rem) */
-  padding: 8rem 0 2rem 0; /* Padding bas réduit de six lignes (~6rem) */
+  padding: 8rem 0 0.5rem 0; /* Réduit encore d'une ligne (~1.5rem) */
 }
 
 .secondaryCards {
@@ -457,7 +457,7 @@
 
   .carouselContainer {
     margin: -7rem 0 1rem 0;
-    padding: 3rem 0 0.5rem 0;
+    padding: 3rem 0 0 0;
   }
 
   .secondaryCards {
