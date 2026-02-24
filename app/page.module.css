@@ -589,7 +589,7 @@
   .valueSpotlightWrap {
     grid-template-columns: 1fr;
     padding: 2rem 1.5rem 4rem; /* Padding haut réduit de 2rem (~2 lignes) */
-    gap: 4rem;
+    gap: 1rem; /* Gap réduit de 3rem (~3 lignes) pour remonter le spotlight */
     margin-top: 0;
   }
 
