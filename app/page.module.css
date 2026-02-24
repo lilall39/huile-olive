@@ -52,19 +52,19 @@
 .heroTextBlock .heroLabel {
   color: #ffffff !important;
   opacity: 1 !important;
-  text-shadow: none !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
 }
 
 .heroTextBlock .heroTitle {
   color: #ffffff !important;
   opacity: 1 !important;
-  text-shadow: none !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
 }
 
 .heroTextBlock .heroSubtitle {
   color: #ffffff !important;
   opacity: 1 !important;
-  text-shadow: none !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
 }
 
 .heroLabel {
@@ -86,13 +86,12 @@
   margin: 3rem 0 1.5rem 0; /* Descendu de deux lignes (~3rem) */
 }
 
-.heroSubtitle {
-  font-size: calc(1.15rem + 1pt);
-  font-weight: 700;
-  color: #fff;
-  line-height: 1.65;
-  margin: 0 0 2rem 0;
-}
+  .heroSubtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
 
 .heroCta {
   display: flex;
@@ -564,6 +563,14 @@
     font-size: 0.95rem;
     letter-spacing: 0.1em;
     font-weight: 800;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    color: #fff;
   }
 
   .heroCta {

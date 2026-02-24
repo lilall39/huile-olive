@@ -400,9 +400,9 @@
   }
 
   .heroSubtitle {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
     font-weight: 500;
   }
 
@@ -438,9 +438,9 @@
   }
 
   .conceptCards .block {
-    padding: 2.5rem 1.75rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    border-radius: 12px;
+    padding: 1.5rem 1.25rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
   }
 
   .block h3 {
