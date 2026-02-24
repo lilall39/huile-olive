@@ -635,38 +635,33 @@
   }
 
   .ctaSection {
-    margin-top: 4rem;
-    padding: 0 1.5rem 4rem;
+    margin-top: 1rem;
+    padding: 0;
     transform: none;
   }
 
   .ctaBottle {
     max-width: 100%;
+    margin: 0;
   }
 
   .ctaContainer {
     height: auto;
-    min-height: 500px;
-    display: flex;
-    flex-direction: column;
+    min-height: 0;
+    display: block;
+    background: transparent;
+    border: none;
+    box-shadow: none;
   }
 
   .ctaButtons {
-    position: relative;
-    height: auto;
-    padding: 3rem 1.5rem;
-    background: rgba(255, 255, 255, 0.92);
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    margin-top: auto;
+    display: none;
   }
 
   .ctaMainButtonWrap,
   .ctaB2BButtonWrap,
   .ctaContactButtonWrap {
-    position: static;
-    width: 100%;
+    display: none;
   }
 
   .ctaButtons a {
