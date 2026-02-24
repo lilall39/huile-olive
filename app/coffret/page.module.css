@@ -113,41 +113,91 @@
 
 .contenu {
   list-style: none;
-  margin: 1.5rem 0 0 0;
+  margin: 2rem 0 0 0;
   padding: 0;
-  max-width: none;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem 2rem;
-}
-
-.contenuItem {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
-  align-items: flex-start;
-  padding: 0;
-  border-bottom: none;
+  gap: 1rem;
 }
 
-.contenuVolume {
-  font-weight: 600;
+.accordion {
+  border-bottom: 1px solid rgba(250, 249, 246, 0.2);
+  overflow: hidden;
+}
+
+.accordionHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
   color: var(--blanc-casse);
-  min-width: auto;
-}
-
-.contenuNom {
-  display: block;
   font-family: var(--font-heading), Georgia, serif;
-  color: var(--blanc-casse);
-  margin-bottom: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
 }
 
-.contenuTerroir,
-.contenuVariete {
-  margin: 0;
+.accordionHeader:hover {
+  opacity: 0.8;
+}
+
+.accordionIcon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.7;
+}
+
+.accordionIconActive {
+  transform: rotate(180deg);
+}
+
+.accordionContent {
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+  overflow: hidden;
+}
+
+.accordionContentActive {
+  max-height: 400px; /* Valeur arbitraire suffisamment grande */
+  opacity: 1;
+  padding-bottom: 1.5rem;
+}
+
+.accordionDetails {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
   font-size: 0.95rem;
-  color: rgba(250, 249, 246, 0.9);
+  line-height: 1.6;
+}
+
+.detailGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.detailLabel {
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+}
+
+.detailValue {
+  color: var(--blanc-casse);
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
 }
 
 .cta {
@@ -192,16 +242,15 @@
     border-radius: 12px;
   }
   .contenu {
+    gap: 0.5rem;
+  }
+  .accordionHeader {
+    font-size: 1.1rem;
+    padding: 1rem 0;
+  }
+  .accordionDetails {
     grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  .contenuItem {
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  .contenuItem:last-child {
-    border-bottom: none;
+    gap: 1rem;
   }
   .ctaText {
     font-size: 1.2rem;
