@@ -250,6 +250,16 @@
   color: #000;
 }
 
+.cta a {
+  background: #1e100c !important; /* Même couleur bois sombre que le bouton du haut */
+  color: var(--blanc-casse) !important;
+  border-color: #cfa652 !important;
+}
+
+.cta a:hover {
+  background: #321b14 !important;
+}
+
 @media (max-width: 768px) {
   .hero {
     padding: 3rem 1.5rem 1.5rem;
