@@ -404,7 +404,7 @@
   .conceptCards {
     grid-template-columns: 1fr;
     gap: 2.5rem;
-    padding: 4rem 1.5rem 0.5rem;
+    padding: 4rem 1.5rem 2.5rem;
     margin-top: 0;
   }
 
@@ -427,7 +427,7 @@
   }
 
   .carouselContainer {
-    margin: -8rem 0 2rem 0;
+    margin: -7rem 0 2rem 0;
     padding: 3rem 0;
   }
 
