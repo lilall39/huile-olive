@@ -82,31 +82,41 @@
 
 @media (max-width: 768px) {
   .inner {
-    padding: 1.5rem 1rem;
-    gap: 1.25rem;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
   }
   
   .list {
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1.25rem;
     align-items: center;
   }
   
   .link {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+  }
+  
+  .legal {
+    padding-top: 2rem;
+    margin-top: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .inner {
-    padding: 0.4rem 0.75rem;
+    padding: 2.5rem 1rem;
   }
   .name {
+    font-size: 1.3rem;
+  }
+  .tagline {
+    font-size: 0.95rem;
+  }
+  .link {
     font-size: 1.1rem;
   }
-  .tagline,
-  .link,
   .contact {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 }

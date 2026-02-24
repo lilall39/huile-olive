@@ -76,32 +76,44 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: clamp(2rem, 8vw, 4rem) 1rem;
+    padding: 6rem 1.5rem 3rem;
   }
   .heroInner {
     width: 100%;
-    padding: 1.25rem 1rem;
+    padding: 2.5rem 1.5rem;
+    border-radius: 12px;
   }
   .heroTitle {
-    font-size: clamp(1.5rem, 5vw, 2.25rem);
+    font-size: clamp(2rem, 8vw, 2.4rem);
+    line-height: 1.1;
   }
   .heroSubtitle {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
   }
   .contactBlock {
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  .contactItem strong {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .contactItem a {
+    font-size: 1.25rem;
+    font-weight: 700;
   }
   .formNote {
-    padding: 1rem;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    padding: 1.5rem 0.75rem;
+    padding-top: 5rem;
   }
   .heroInner {
-    padding: 1rem 0.75rem;
+    padding: 2rem 1.25rem;
   }
 }

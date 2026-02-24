@@ -32,7 +32,7 @@
   font-family: var(--font-heading), Georgia, serif;
   font-size: 1.75rem; /* Taille réduite */
   font-weight: 700;
-  color: var(--olive-fonce);
+  color: #0a140a; /* Vert très foncé */
   margin: 0;
 }
 
@@ -103,6 +103,7 @@
   border-radius: 8px;
   padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.25rem, 3vw, 1.75rem);
   color: var(--blanc-casse);
+  margin-top: 3rem; /* Espace ajouté pour ne plus toucher les cartes du haut */
 }
 
 .contenuSection h2,
@@ -163,43 +164,59 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 2rem 1rem;
+    padding: 6rem 1.5rem 2rem;
   }
   .heroGrid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 2.5rem;
   }
   .heroContent {
-    padding: 1.25rem 1rem;
+    padding: 2.5rem 1.5rem;
+    border-radius: 12px;
   }
   .heroTitle {
-    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-size: clamp(2rem, 8vw, 2.4rem);
+    line-height: 1.1;
+  }
+  .heroSubtitle {
+    font-size: 1.2rem;
   }
   .heroVisual {
     order: -1;
-    aspect-ratio: 16/10;
+    aspect-ratio: 1/1;
+    border-radius: 12px;
   }
   .contenuSection {
-    padding: 1.25rem 1rem;
+    padding: 3rem 1.5rem;
+    margin-top: 4rem;
+    border-radius: 12px;
   }
   .contenu {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
-    margin-top: 1rem;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .contenuItem {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .contenuItem:last-child {
+    border-bottom: none;
   }
   .ctaText {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    margin: 2rem 0;
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    padding: 1.5rem 0.75rem;
+    padding-top: 5rem;
   }
   .heroContent {
-    padding: 1rem 0.75rem;
+    padding: 2rem 1.25rem;
   }
   .contenuSection {
-    padding: 1rem 0.75rem;
+    padding: 2.5rem 1.25rem;
   }
 }

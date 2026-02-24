@@ -9,7 +9,7 @@
 .inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0.25rem 1.5rem 0.25rem 1.5rem; /* bas remonté d’une ligne */
+  padding: 0.25rem 1.5rem 0rem 1.5rem; /* Bas réduit à 0 pour gagner de la hauteur */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,8 +23,8 @@
   padding: 0;
   line-height: 0;
   text-decoration: none;
-  width: 260px;
-  height: 89px;
+  width: 234px; /* Réduit de 10% (était 260px) */
+  height: 80px; /* Réduit de 10% (était 89px) */
   flex-shrink: 0;
 }
 
@@ -37,8 +37,8 @@
   display: block;
   width: 100%;
   height: 100%;
-  max-width: 260px;
-  max-height: 89px;
+  max-width: 234px; /* Réduit de 10% */
+  max-height: 80px; /* Réduit de 10% */
   object-fit: contain;
   object-position: left center;
 }
@@ -110,13 +110,13 @@
   }
 
   .logo {
-    width: 130px;
-    height: 45px;
+    width: 117px; /* Réduit de 10% (était 130px) */
+    height: 40px; /* Réduit de 10% (était 45px) */
   }
 
   .logoImg {
-    max-width: 130px;
-    max-height: 45px;
+    max-width: 117px;
+    max-height: 40px;
   }
 
   .hamburger {
@@ -137,29 +137,37 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 5rem 1.5rem 2rem;
+    padding: 2rem;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.2s, visibility 0.2s;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(-10px);
   }
 
   .navOpen {
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
   }
 
   .list {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2.5rem;
     align-items: center;
     text-align: center;
   }
 
   .link {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
+    font-family: var(--font-heading), Georgia, serif;
     display: block;
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 1rem;
     color: #0a140a !important; /* Texte vert très foncé forcé pour être visible sur le blanc */
+    transition: transform 0.2s;
+  }
+
+  .link:active {
+    transform: scale(0.95);
   }
 }
 
