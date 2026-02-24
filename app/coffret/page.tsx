@@ -7,7 +7,7 @@ import { COFFRET, PRODUCTEURS } from "@/lib/constants";
 import styles from "./page.module.css";
 
 export default function CoffretPage() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const getProducteur = (id: string) => PRODUCTEURS.find((p) => p.id === id);
 
