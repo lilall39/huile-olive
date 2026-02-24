@@ -121,8 +121,12 @@
 }
 
 .accordion {
-  border-bottom: 1px solid rgba(250, 249, 246, 0.2);
+  background: rgba(215, 215, 215, 0.95);
+  border: 3px solid #cfa652;
+  border-radius: 8px;
   overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 0 1.5rem;
 }
 
 .accordionHeader {
@@ -135,10 +139,10 @@
   border: none;
   cursor: pointer;
   text-align: left;
-  color: var(--blanc-casse);
+  color: #0a140a;
   font-family: var(--font-heading), Georgia, serif;
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 700;
   transition: opacity 0.3s ease;
 }
 
@@ -150,7 +154,8 @@
   width: 20px;
   height: 20px;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 0.7;
+  opacity: 0.8;
+  color: #0a140a;
 }
 
 .accordionIconActive {
@@ -176,6 +181,7 @@
   gap: 1.5rem;
   font-size: 0.95rem;
   line-height: 1.6;
+  color: #0a140a;
 }
 
 .detailGroup {
@@ -189,11 +195,13 @@
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  opacity: 0.6;
+  opacity: 0.7;
+  color: #0a140a;
 }
 
 .detailValue {
-  color: var(--blanc-casse);
+  color: #0a140a;
+  font-weight: 500;
 }
 
 .fullWidth {
