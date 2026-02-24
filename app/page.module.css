@@ -586,6 +586,11 @@
     font-size: 0.95rem;
   }
 
+  .heroTextBlock {
+    padding: 0.5rem 0;
+    margin-bottom: 0;
+  }
+
   .valueSpotlightWrap {
     grid-template-columns: 1fr;
     padding: 2rem 1.5rem 4rem; /* Padding haut réduit de 2rem (~2 lignes) */

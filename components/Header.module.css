@@ -110,30 +110,30 @@
   }
 
   .inner {
-    padding: 0.1rem 1rem;
+    padding: 0.05rem 1rem;
   }
 
   .logo {
-    width: 35px;
-    height: 12px;
+    width: 80px;
+    height: 28px;
   }
 
   .logoImg {
-    max-width: 35px;
-    max-height: 12px;
+    max-width: 80px;
+    max-height: 28px;
   }
 
   .hamburger {
     display: flex;
     order: 2;
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     border-width: 1px;
     gap: 2px;
   }
 
   .hamburgerBar {
-    width: 12px;
+    width: 10px;
     height: 1px;
   }
 
