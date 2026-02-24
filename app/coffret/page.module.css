@@ -177,6 +177,11 @@
   transition: opacity 0.3s ease;
 }
 
+.accordionHeader span {
+  font-weight: 900 !important;
+  color: #000 !important;
+}
+
 .accordionHeader:hover {
   opacity: 0.8;
 }
@@ -231,8 +236,8 @@
 }
 
 .detailValue {
-  color: #0a140a;
-  font-weight: 500;
+  color: #000 !important;
+  font-weight: 900 !important;
 }
 
 .fullWidth {
