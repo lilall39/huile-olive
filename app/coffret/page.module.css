@@ -164,7 +164,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 6rem 1.5rem 2rem;
+    padding: 3rem 1.5rem 1.5rem;
   }
   .heroGrid {
     grid-template-columns: 1fr;

@@ -59,7 +59,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 6rem 1.5rem 3rem;
+    padding: 3rem 1.5rem 2.5rem;
   }
   .heroTitle {
     font-size: clamp(2rem, 8vw, 2.4rem);

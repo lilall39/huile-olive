@@ -535,8 +535,8 @@
 @media (max-width: 768px) {
   .hero {
     height: auto;
-    min-height: 50vh;
-    padding: 2.5rem 1.25rem 1.5rem;
+    min-height: 40vh;
+    padding: 0.5rem 1.25rem 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
