@@ -26,6 +26,13 @@
 .heroContent a {
   padding-top: 0.64rem !important;
   padding-bottom: 0.64rem !important;
+  background: #1e100c !important; /* Couleur bois sombre foncée */
+  color: var(--blanc-casse) !important;
+  border-color: #cfa652 !important;
+}
+
+.heroContent a:hover {
+  background: #321b14 !important; /* Légèrement plus clair au survol */
 }
 
 .heroTitle {
