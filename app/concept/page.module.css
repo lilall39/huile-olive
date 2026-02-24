@@ -341,7 +341,7 @@
   .hero {
     height: auto;
     min-height: 60vh;
-    padding: 1rem 1.5rem 2rem;
+    padding: 0.7rem 1.5rem 1.4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
