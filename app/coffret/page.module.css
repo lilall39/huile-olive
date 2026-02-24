@@ -120,20 +120,22 @@
 
 .contenuSection div[class*="sectionTitle"] {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 2rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin-bottom: 2.5rem;
 }
 
 .contenuSection div[class*="sectionTitle"] h2 {
   margin-bottom: 0;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .contenuSection div[class*="sectionTitle"] p {
   margin: 0;
   max-width: none;
+  white-space: nowrap;
 }
 
 .contenu {
