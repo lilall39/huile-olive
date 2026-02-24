@@ -1,5 +1,5 @@
 .hero {
-  padding: clamp(3rem, 8vw, 5rem) 1.5rem;
+  padding: clamp(3rem, 8vw, 5rem) 1.5rem 0 1.5rem;
   background: linear-gradient(180deg, rgba(239, 233, 226, 0.01) 0%, rgba(250, 249, 246, 0.05) 60%);
 }
 
@@ -9,29 +9,35 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  align-items: center;
+  align-items: center; /* Changé de stretch à center pour réduire la hauteur */
 }
 
 .heroContent {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  background: var(--goutte-huile);
-  border: 3px solid var(--border-color);
+  gap: 0.75rem;
+  background: var(--blanc-casse);
+  border: 3px solid #f2c94c; /* Bordure or identique aux boutons et cartes accueil */
   border-radius: 8px;
-  padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.25rem, 3vw, 1.75rem);
+  padding: 1.25rem 1.5rem; /* Padding réduit pour gagner de la hauteur */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.heroContent a {
+  padding-top: 0.64rem !important;
+  padding-bottom: 0.64rem !important;
 }
 
 .heroTitle {
   font-family: var(--font-heading), Georgia, serif;
-  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-size: 1.75rem; /* Taille réduite */
   font-weight: 700;
   color: var(--olive-fonce);
   margin: 0;
 }
 
 .heroSubtitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #000;
   margin: 0;
@@ -39,16 +45,18 @@
 
 .heroDesc {
   margin: 0;
-  line-height: 1.65;
+  line-height: 1.4;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #000;
 }
 
 .priceBlock {
   display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  margin: 0.5rem 0;
+  flex-direction: row; /* Passage en horizontal */
+  align-items: baseline;
+  gap: 1rem;
+  margin: 0.25rem 0;
 }
 
 .price {
@@ -63,21 +71,30 @@
 }
 
 .heroVisual {
-  aspect-ratio: 1;
   display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
   overflow: hidden;
+  background: none !important;
+  border: 3px solid #f2c94c; /* Ajout de la bordure or */
+  border-radius: 8px;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+  width: 100%; /* S'assure qu'il prend toute la largeur de sa colonne */
+}
+
+.heroVisual:hover {
+  transform: scale(2);
+  z-index: 100;
+  box-shadow: none !important;
 }
 
 .heroVisualImg {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto; /* Laisse l'image définir sa hauteur naturellement */
+  object-fit: cover;
   display: block;
-  border: 4px solid var(--border-color);
-  border-radius: 8px;
 }
 
 .contenuSection {

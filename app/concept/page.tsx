@@ -1,18 +1,9 @@
-"use client";
-
-import { useState } from "react";
 import { SectionTitle } from "@/components/SectionTitle";
 import { Button } from "@/components/Button";
 import { SITE } from "@/lib/constants";
 import styles from "./page.module.css";
 
 export default function ConceptPage() {
-  const [zoomedIndex, setZoomedIndex] = useState<number | null>(null);
-
-  const toggleZoom = (index: number) => {
-    setZoomedIndex(zoomedIndex === index ? null : index);
-  };
-
   return (
     <>
       <section className={styles.hero}>
@@ -84,10 +75,7 @@ export default function ConceptPage() {
         <div className={styles.secondaryCards}>
           {[0, 1, 2, 3, 4].map((i) => (
             <div key={`card-${i}`} className={styles.cardWrapper}>
-              <div 
-                className={`${styles.block} ${zoomedIndex === i ? styles.zoomed : ""}`}
-                onClick={() => toggleZoom(i)}
-              >
+              <div className={styles.block}>
                 <img src="/concept-card-1.png" alt="Domaine des Oliviers de Kabylie" className={styles.cardImg} />
               </div>
               {i < 4 && (
@@ -107,10 +95,7 @@ export default function ConceptPage() {
           </div>
           {[0, 1, 2, 3, 4].map((i) => (
             <div key={`card-clone-${i}`} className={styles.cardWrapper}>
-              <div 
-                className={`${styles.block} ${zoomedIndex === i + 5 ? styles.zoomed : ""}`}
-                onClick={() => toggleZoom(i + 5)}
-              >
+              <div className={styles.block}>
                 <img src="/concept-card-1.png" alt="Domaine des Oliviers de Kabylie" className={styles.cardImg} />
               </div>
               {i < 4 && (

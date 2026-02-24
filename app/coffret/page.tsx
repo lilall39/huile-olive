@@ -26,8 +26,8 @@ export default function CoffretPage() {
           </div>
           <div className={styles.heroVisual}>
             <img
-              src="/bouteille-huile-olive.png"
-              alt="Bouteille d'huile d'olive et olives"
+              src="/coffret-selection.png"
+              alt="Sélection de coffrets NAFEES"
               className={styles.heroVisualImg}
             />
           </div>

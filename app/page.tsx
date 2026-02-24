@@ -47,44 +47,58 @@ export default function HomePage() {
 
       <div className={styles.valueSpotlightWrap}>
         <section className={`section ${styles.value}`}>
-        <SectionTitle
-          title="Curation, pas production"
-          subtitle="Notre rôle : repérer l'excellence, la mettre en avant, vous la proposer dans un écrin digne d'elle."
-          align="center"
-          variant="goutte"
-          className={styles.animateSlide}
-        />
-        <div className={styles.valueList}>
-          <div className={styles.valueGrid}>
-            <div className={styles.valueCard}>
-              <div className={styles.valueCardHead}>
-                <strong>Uniquement des huiles médaillées</strong>
+          <SectionTitle
+            title="Curation, pas production"
+            subtitle="Notre rôle : repérer l'excellence, la mettre en avant, vous la proposer dans un écrin digne d'elle."
+            align="center"
+            variant="goutte"
+            className={styles.animateSlide}
+          />
+          <div className={styles.valueList}>
+            <div className={styles.valueGrid}>
+              <div className={styles.valueCard}>
+                <div className={styles.valueCardHead}>
+                  <strong>Uniquement des huiles médaillées</strong>
+                </div>
+                <p className={styles.valueCardDesc}>
+                  NYIOOC, BIOL, EVOOLEUM… Nous ne sélectionnons que des bouteilles déjà récompensées.
+                </p>
               </div>
-              <p className={styles.valueCardDesc}>
-                NYIOOC, BIOL, EVOOLEUM… Nous ne sélectionnons que des bouteilles déjà récompensées.
-              </p>
-            </div>
-            <div className={styles.valueCard}>
-              <div className={styles.valueCardHead}>
-                <strong>Les producteurs au centre</strong>
+
+              <div className={styles.valueGridArrow}>
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#f2c94c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </div>
-              <p className={styles.valueCardDesc}>
-                Chaque huile raconte un terroir et un savoir-faire. Nous les mettons en lumière.
-              </p>
-            </div>
-            <div className={styles.valueCard}>
-              <div className={styles.valueCardHead}>
-                <strong>Un coffret dégustation pensé</strong>
+
+              <div className={styles.valueCard}>
+                <div className={styles.valueCardHead}>
+                  <strong>Les producteurs au centre</strong>
+                </div>
+                <p className={styles.valueCardDesc}>
+                  Chaque huile raconte un terroir et un savoir-faire. Nous les mettons en lumière.
+                </p>
               </div>
-              <p className={styles.valueCardDesc}>
-                Trois huiles, trois profils. Pour découvrir la diversité de l'huile algérienne.
-              </p>
+
+              <div className={styles.valueGridArrow}>
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#f2c94c" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+
+              <div className={styles.valueCard}>
+                <div className={styles.valueCardHead}>
+                  <strong>Un coffret dégustation pensé</strong>
+                </div>
+                <p className={styles.valueCardDesc}>
+                  Trois huiles, trois profils. Pour découvrir la diversité de l'huile algérienne.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
         </section>
 
-      <section className={`section ${styles.spotlight}`}>
+        <section className={`section ${styles.spotlight}`}>
         <div className={styles.spotlightCard}>
           <div className={styles.spotlightContent}>
             <h2 className={`${styles.spotlightTitle} ${styles.animateSlide}`} style={{ animationDelay: '0ms' }}>{COFFRET.nom}</h2>

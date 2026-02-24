@@ -31,7 +31,7 @@
 /* Cadre avec fond couleur goutte d’huile — épouse le texte */
 .goutte {
   background: #d7d7d7;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 3px solid #f2c94c;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.4);
   border-radius: 8px;
   padding: 0.6rem 1rem;
