@@ -106,17 +106,17 @@
 
 @media (max-width: 768px) {
   .inner {
-    padding: 0.5rem 1rem;
+    padding: 0.35rem 1rem;
   }
 
   .logo {
-    width: 117px; /* Réduit de 10% (était 130px) */
-    height: 40px; /* Réduit de 10% (était 45px) */
+    width: 100px;
+    height: 34px;
   }
 
   .logoImg {
-    max-width: 117px;
-    max-height: 40px;
+    max-width: 100px;
+    max-height: 34px;
   }
 
   .hamburger {
